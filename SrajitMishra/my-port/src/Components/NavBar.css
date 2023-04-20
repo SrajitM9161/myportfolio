@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@100;700&family=Open+Sans:wght@500;700&display=swap');
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+   
+}
+.nm1{
+    display: flex;
+    border-radius : 20px 20px 20px 20px;
+    background-color: rgb(113, 103, 103);
+}
+.nm1 li{
+    padding: 25px;
+  
+}
+
+.nm1 li :hover{
+    color: aqua;
+    text-decoration: 3px underline;
+}
+.nm1 li a{
+    font-size: 1.2rem;
+    font-weight: 500;
+   
+}
+.logo{
+    font-family:"Dancing Script";
+ font-size: 60px;
+ color: rgb(100, 188, 188);
+}
+@media screen and (max-width: 1040px) {
+    .nm1 {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color:black;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: -3;
+        transition: 0.3s;
+        padding: 1rem 0;
+    
+    }
+    .nm1.active {
+     left: 0;
+    }
+    .nm1 li{
+        padding: 1rem 0;
+    }
+    .nm1 li a{
+        padding: 1rem 0;
+    }
+
+    .icon{
+        display: none;
+        color: white;
+    }
+    
+}
+
+
+.icon{
+ display: initial;
+}
+
+
