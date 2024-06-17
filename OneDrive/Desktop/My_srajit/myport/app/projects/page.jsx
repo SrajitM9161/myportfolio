@@ -44,8 +44,8 @@ const projectsData = [
     title: "Srajit Portfolio",
     TecStack: ["Next.js","Tailwind.css","Framer","Shadcn/ui"],
     Descri: "My Portfoilio ",
-    Gitlink: "https://github.com/SrajitM9161/My_portfoilo",
-    LiveLink: "https://64f70c31db727200941b3455--incredible-rugelach-f28bfa.netlify.app/",
+    Gitlink: "https://github.com/SrajitM9161/myportfolio",
+    LiveLink: "https://myportfolio-flax-two.vercel.app/",
     ImageSrc: img6,
   },
   {
