@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { LayoutDashboard } from "lucide-react";
 import { FaRegComments, FaImage, FaMusic, FaVideo, FaMicrophone, FaUserAlt, FaCode, FaMagic } from "react-icons/fa";
 import { usePathname } from "next/navigation";
-import { text } from "stream/consumers";
+
 
 const montserrat = Montserrat({
   weight: "600",
@@ -24,13 +24,13 @@ const routes = [
   {
     label: "Conversation",
     icon: FaRegComments,
-    href: "/conversation",
+    href: "/Conversation",
     color: "text-green-500"
   },
   {
     label: "Image Generation",
     icon: FaImage,
-    href: "/image-generation",
+    href: "/Image",
     color: "text-blue-500"
   },
   {
@@ -48,7 +48,7 @@ const routes = [
   {
     label: "Audio Generation",
     icon: FaMicrophone,
-    href: "/audio-generation",
+    href: "/Audio",
     color: "text-teal-500"
   },
   {
@@ -60,13 +60,13 @@ const routes = [
   {
     label: "Code Generation",
     icon: FaCode,
-    href: "/code-generation",
+    href: "/Code",
     color: "text-indigo-500"
   },
   {
-    label: "Voice Changer",
+    label: "Voice Inhancer",
     icon: FaMagic,
-    href: "/voice-changer",
+    href: "/Voice",
     color: "text-yellow-500"
   }
 ];
