@@ -28,14 +28,14 @@ export default function Dashboard() {
     {
       label: "Music Generation",
       icon: FaMusic,
-      href: "/music-generation",
+      href: "/Music",
       color: "text-purple-500",
       bgColour: "bg-purple-500/10"
     },
     {
       label: "Video Generation",
       icon: FaVideo,
-      href: "/video-generation",
+      href: "/Video",
       color: "text-red-500",
       bgColour: "bg-red-500/10"
     },

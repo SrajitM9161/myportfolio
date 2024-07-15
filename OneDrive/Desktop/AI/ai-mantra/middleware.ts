@@ -1,27 +1,15 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import { getToken } from "next-auth/jwt";
-import { Default_Login_Redirect, publicRoutes, authRoutes } from "./routes";
+import NextAuth from "next-auth"
+import authConfig from "./auth.config"
 
-export async function middleware(req: NextRequest) {
-  const token = await getToken({ req });
-  const { pathname } = req.nextUrl;
+const {auth}= NextAuth(authConfig)
 
-  // Check if the route is public
-  const isPublicRoute = publicRoutes.includes(pathname);
-  const isAuthRoute = authRoutes.includes(pathname);
+export default auth((req:any) =>{
+  const isLoggedIn= !! req.auth
+  console.log("ROUTE",req.nextUrl.pathname)
+  console.log("Is Logged",isLoggedIn)
+})
 
-  if (isAuthRoute && token) {
-    return NextResponse.redirect(new URL(Default_Login_Redirect, req.url));
-  }
-
-  if (!isPublicRoute && !token) {
-    return NextResponse.redirect(new URL("/auth/login", req.url));
-  }
-
-  return NextResponse.next();
-}
-
-export const config = {
-  matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
-};
+  export const config = {
+    matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
+  };
+  

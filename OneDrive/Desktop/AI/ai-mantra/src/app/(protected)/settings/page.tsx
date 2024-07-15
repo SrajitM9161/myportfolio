@@ -1,23 +1,22 @@
-import { getServerSession } from "next-auth";
-import authConfig from "../../../../auth.config";
+// import { getSession } from "next-auth/react";
+// import { GetServerSideProps } from "next";
 
-const SettingsPage = async () => {
-  const session = await getServerSession(authConfig);
+// const SettingPage = ({ session }) => {
+//   return (
+//     <div>
+//       {JSON.stringify(session)}
+//     </div>
+//   );
+// };
 
-  if (!session) {
-    if (typeof window !== "undefined") {
-      window.location.href = "/auth/login";
-      return null;
-    }
-    return <div>Redirecting...</div>;
-  }
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const session = await getSession(context);
 
-  return (
-    <div>
-      <h1>Settings Page</h1>
-      <pre>{JSON.stringify(session, null, 2)}</pre>
-    </div>
-  );
-};
+//   return {
+//     props: {
+//       session,
+//     },
+//   };
+// };
 
-export default SettingsPage;
+// export default SettingPage;

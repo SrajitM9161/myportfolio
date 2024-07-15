@@ -36,13 +36,13 @@ const routes = [
   {
     label: "Music Generation",
     icon: FaMusic,
-    href: "/music-generation",
+    href: "/Music",
     color: "text-purple-500"
   },
   {
     label: "Video Generation",
     icon: FaVideo,
-    href: "/video-generation",
+    href: "/Video",
     color: "text-red-500"
   },
   {
@@ -52,7 +52,7 @@ const routes = [
     color: "text-teal-500"
   },
   {
-    label: "Avatar Generation",
+    label: "Speech To Text ",
     icon: FaUserAlt,
     href: "/avatar-generation",
     color: "text-orange-500"
@@ -63,12 +63,7 @@ const routes = [
     href: "/Code",
     color: "text-indigo-500"
   },
-  {
-    label: "Voice Inhancer",
-    icon: FaMagic,
-    href: "/Voice",
-    color: "text-yellow-500"
-  }
+ 
 ];
 
 const Sidebar = () => {

@@ -16,7 +16,6 @@ import { LogiSchema } from "../../schemas/LoginSchema";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
 import { FormError } from "./form-error";
-import { login } from "../../actions/login";
 import { useState, useTransition } from "react";
 
 export const LoginForm = () => {
@@ -24,19 +23,38 @@ export const LoginForm = () => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
 
-  const form = useForm<z.infer<typeof LogiSchema>>({
-    resolver: zodResolver(LogiSchema),
+  const form = useForm<z.infer<typeof LogiSchema >>({
+    resolver: zodResolver(LogiSchema ),
     defaultValues: {
       email: "",
       password: "",
     },
   });
 
-  const onSubmit = (values: z.infer<typeof LogiSchema>) => {
+  const onSubmit = async (values: z.infer<typeof LogiSchema >) => {
     startTransition(() => {
-      login(values).then((data) => {
-        setError(data.error);
+      fetch('/api/auth/loginform', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+      .then(async (res) => {
+        if (!res.ok) {
+          // Handle non-2xx HTTP responses
+          const errorResponse = await res.json();
+          throw new Error(errorResponse.error || 'Something went wrong');
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setError('');
         setSuccess(data.success);
+      })
+      .catch((error) => {
+        setSuccess('');
+        setError(error.message);
       });
     });
   };
