@@ -7,17 +7,12 @@ export interface NavLink {
   export const navLinks: NavLink[] = [
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
-    { title: "Services", href: "/services" },
-    { title: "Contact", href: "/contact" },
+    { title: "Docs", href: "/Docs" },
+    { title: "Blog", href: "/Blog" },
   ];
 
   export const sideBarActiveItem = atom<string>("/dashboard");
 
-  type DashboardSideBarTypes = {
-    title: string;
-    url: string;
-    icon: any;
-  };
   
   
   

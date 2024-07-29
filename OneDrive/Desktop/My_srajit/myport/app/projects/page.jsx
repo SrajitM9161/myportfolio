@@ -10,9 +10,20 @@ import img3 from "@/public/img/project3.png";
 import img4 from "@/public/img/project4.png";
 import img5 from "@/public/img/pro5.png";
 import img6 from "@/public/img/project6.png";
+import img7 from "@/public/img/img7.png"
 const projectsData = [
   {
     num: "01",
+    title: "News Wave",
+    TecStack: ["Next.js", "MongoDb", "Shadcn", "Tailwind","Prisma","Unlayer","AWS","Stripe"],
+    Descri: "News Wave is a dynamic website that enables businesses to create and manage custom newsletter templates tailored to their branding needs. It offers a comprehensive platform for designing, sending, and tracking the performance of newsletters.",
+    Gitlink: "https://github.com/SrajitM9161/Newsletter-SAAS",
+    LiveLink: "https://newsletter-saas-sepia.vercel.app/",
+    ImageSrc: img7 ,
+  },
+  
+  {
+    num: "02",
     title: "Agrismart",
     TecStack: ["FullStack", "MERN", "AI/ML", "Flask","FireBase","Data.gov Api"],
     Descri: "We've developed a platform that streamlines crop transactions and market connections for farmers, integrating features like remote delivery and real-time price updates with 100% accuracy, including MSP data. Our Crop Recommendation system achieves a remarkable 98% accuracy in advising optimal crops for fields, leveraging advanced algorithms. Currently, our platform serves a community of 20-30 users, with 10-15 regular users, and we are focused on expanding our reach and enhancing our capabilities to better support the agricultural industry.",
@@ -21,7 +32,7 @@ const projectsData = [
     ImageSrc: img1,
   },
   {
-    num: "02",
+    num: "03",
     title: "AgriSmartAdmin",
     TecStack: ["FullStack", "MERN", "AI/ML", "Flask","FireBase","Data.gov Api","Email.js"],
     Descri: "From an admin perspective, managing crop transactions involves overseeing various aspects of user interactions on the platform. This includes receiving requests from users for buying and selling crops, ensuring smooth transactions, and resolving any issues that may arise during the process. Admins monitor the platform to facilitate efficient communication between buyers and sellers, verify listings for accuracy and compliance with platform guidelines, and manage payment processing and delivery logistics for remote transactions. Additionally, admins analyze transaction data to track trends, optimize user experience, and make informed decisions to improve platform performance and user satisfaction.",
@@ -29,8 +40,9 @@ const projectsData = [
     LiveLink: "https://agri-smart-admin.vercel.app/",
     ImageSrc: img2,
   },
+  
   {
-    num: "03",
+    num: "04",
     title: "D Drive",
     TecStack: ["Blockchain,", "Solidity", "React.js","Javascript","Etherum","Web3.js","IPFS"],
     Descri: "In February 2024, we successfully launched a live project with a published research paper. Our platform utilizes IPFS and blockchain for secure, immutable storage. We seamlessly integrated with Pinata for efficient handling of media content on IPFS, ensuring reliable access and data integrity for our users.",
@@ -40,7 +52,7 @@ const projectsData = [
   },
 
   {
-    num: "04",
+    num: "05",
     title: "Srajit Portfolio",
     TecStack: ["Next.js","Tailwind.css","Framer","Shadcn/ui"],
     Descri: "My Portfoilio ",
@@ -49,7 +61,7 @@ const projectsData = [
     ImageSrc: img6,
   },
   {
-    num: "05",
+    num: "06",
     title: "RodeMap Finder",
     TecStack: ["React.js","Auth0"],
     Descri: "A roadmap finder website enables users to create and manage project, product, or strategy roadmaps with customizable templates and collaborative tools, facilitating clear goal-setting and progress tracking.",
@@ -58,7 +70,7 @@ const projectsData = [
     ImageSrc: img4,
   },
   {
-    num: "06",
+    num: "07",
     title: "Ecommerce website",
     TecStack: [],
     Descri: "Ecommerce Clone",
