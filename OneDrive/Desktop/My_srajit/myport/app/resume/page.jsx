@@ -1,20 +1,21 @@
 "use client"
 import { motion } from 'framer-motion';
-const resume = () => {
+
+const Resume = () => {
   return (
-        <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center h-screen">
       <motion.iframe
-        src="https://drive.google.com/file/d/1VdxbOdTOHhZde3y8xWZsXpnRDOyvxGeG/preview"
+        src="https://drive.google.com/file/d/1ZYL9br57IkH7_SCy_uyjecPeA7mwCAqo/preview"
         className="border-4 border-blue-500 rounded-lg"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
         width="800"
         height="600"
+        allowFullScreen
       />
-    
     </div>
   )
 }
 
-export default resume
+export default Resume;
