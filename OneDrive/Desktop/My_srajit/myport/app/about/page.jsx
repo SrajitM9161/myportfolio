@@ -59,7 +59,7 @@ const Achievements = {
   ]
 };
 
-const about = () => {
+const About = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -85,8 +85,20 @@ const about = () => {
                 <h2 className="text-2xl font-bold">{abouts.title}</h2>
                 <ul>
                   {abouts.info.map((item, index) => (
-                    <li key={index} className="py-1">
-                      <strong>{item.fieldName}:</strong> {item.fieldValue}
+                    <li key={index} className="py-1 break-words">
+                      <strong>{item.fieldName}:</strong>{' '}
+                      {item.fieldValue.startsWith('http') ? (
+                        <a 
+                          href={item.fieldValue}
+                          className="break-all"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.fieldValue}
+                        </a>
+                      ) : (
+                        item.fieldValue
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -150,4 +162,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
